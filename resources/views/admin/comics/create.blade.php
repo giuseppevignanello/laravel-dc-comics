@@ -2,9 +2,10 @@
 @section('content')
     <div class="container">
         <form action="{{ route('comics.store') }}" method="post">
+            @csrf
             <div class="col-md-4">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="title" nmae="title" required>
+                <input type="text" class="form-control" id="title" name="title" required>
             </div>
             <div class="col-md-4">
                 <label for="description" class="form-label">Description</label>
@@ -28,7 +29,7 @@
             </div>
             <div class="col-md-4">
                 <label for="type" class="form-label">Type</label>
-                <input type="date" class="form-control" id="type" name="type" required>
+                <input type="text" class="form-control" id="type" name="type" required>
             </div>
             <div class="col-12">
                 <button class="btn btn-primary" type="submit">Submit form</button>
