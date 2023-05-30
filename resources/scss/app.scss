@@ -4,3 +4,10 @@
 a {
     color: white
 }
+
+.jumbotron {
+    background-image: url('/resources/img/batman_jumbotron.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
