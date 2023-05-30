@@ -6,12 +6,14 @@
             @forelse ($comics as $comic)
                 <div class="col">
                     <div class="card my-3 p-3">
-                        <img style="" class="card-img-top" src="{{ $comic->thumb }}" alt="Title">
-                        <div class="card-body">
-                            <h4 class="card-title">{{ $comic->title }}</h4>
-                            <p class="card-text">{{ $comic->series }}</p>
-                            <p class="card-text"><strong> {{ $comic->price }} </strong></p>
-                        </div>
+                        <a href="admin\comics\{{ $comic->id }}">
+                            <img style="" class="card-img-top" src="{{ $comic->thumb }}" alt="Title">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ $comic->title }}</h4>
+                                <p class="card-text">{{ $comic->series }}</p>
+                                <p class="card-text"><strong> {{ $comic->price }} </strong></p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             @empty
