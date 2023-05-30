@@ -4,6 +4,13 @@
     <h1 class="text-white mx-5 my-3">All the comics</h1>
     <a class="btn btn-primary mx-5" href="{{ route('comics.create') }}" role="button">Add new Comic</a>
     <div class="container">
+        @if (session('message'))
+            <div class="alert alert-primary" role="alert">
+                <strong>{{ session('message') }}</strong>
+            </div>
+        @endif
+
+
         <table class="table table-primary my-5">
             <thead>
                 <tr>
