@@ -9,11 +9,8 @@
                         <th scope="col">Title</th>
                         <th scope="col">Thumb</th>
                         <th scope="col">Price</th>
-                        <th scope="col">Series</th>
-                        <th scope="col">Sale Date</th>
-                        <th scope="col">Type</th>
-                        <th scope="col">Created at</th>
-                        <th scope="col">Updated at</th>
+                        <th scope="col" colspan="4" class="text-center">Actions</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -22,11 +19,15 @@
                             <td>{{ $comic->title }}</td>
                             <td><img style="height: 70px" src="{{ $comic->thumb }}" alt=""></td>
                             <td>{{ $comic->price }}</td>
-                            <td>{{ $comic->series }}</td>
-                            <td>{{ $comic->sale_date }}</td>
-                            <td>{{ $comic->type }}</td>
-                            <td>{{ $comic->created_at }}</td>
-                            <td>{{ $comic->updated_at }}</td>
+                            <td>
+                                <a href="comics/{{ $comic->id }}"><i class="fa-solid fa-eye"></i> </a>
+                            </td>
+                            <td>
+                                <a href="comics/{{ $comic->id }}"><i class="fa-solid fa-pen-to-square"></i> </a>
+                            </td>
+                            <td>
+                                <a href="comics/{{ $comic->id }}"><i class="fa-solid fa-trash"></i></a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
