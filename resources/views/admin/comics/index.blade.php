@@ -3,7 +3,7 @@
 @section('content')
     <h1 class="text-white mx-5 my-3">All the comics</h1>
     <a class="btn btn-primary mx-5" href="{{ route('comics.create') }}" role="button">Add new Comic</a>
-    <div class="container mb-5">
+    <div class="container mb-5 pb-3">
         @if (session('message'))
             <div class="alert alert-primary" role="alert">
                 <strong>{{ session('message') }}</strong>

@@ -4,7 +4,7 @@
         <form action="{{ route('comics.store') }}" method="post">
             @csrf
             <div class="col-md-4">
-                <label for="title" class="form-label text-white">Title</label>
+                <label for="title" class="form-label text-white mt-3">Title</label>
                 <input type="text" class="form-control" id="title" name="title" required>
             </div>
             <div class="col-md-4">
@@ -32,7 +32,7 @@
                 <input type="text" class="form-control" id="type" name="type" required>
             </div>
             <div class="col-12">
-                <button class="btn btn-primary" type="submit">Submit form</button>
+                <button class="btn btn-primary my-4" type="submit">Add comic</button>
             </div>
         </form>
     </div>
