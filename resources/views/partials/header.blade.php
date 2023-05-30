@@ -7,7 +7,12 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0 d-flex align-items-center">
+                    <li>
+                        <div class="logo d-flex align-items-center">
+                            <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="dc logo">
+                        </div>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('home') }}" aria-current="page">Home <span
                                 class="visually-hidden">(current)</span></a>
