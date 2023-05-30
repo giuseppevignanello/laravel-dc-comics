@@ -3,7 +3,7 @@
 @section('content')
     <h1 class="text-white mx-5 my-3">All the comics</h1>
     <a class="btn btn-primary mx-5" href="{{ route('comics.create') }}" role="button">Add new Comic</a>
-    <div class="container">
+    <div class="container mb-5">
         @if (session('message'))
             <div class="alert alert-primary" role="alert">
                 <strong>{{ session('message') }}</strong>
@@ -30,12 +30,14 @@
                         <td>
 
                             <button type="submit" class="btn btn-primary"><a href="comics/{{ $comic->id }}"
-                                    role="button"> <a href="comics/{{ $comic->id }}"><i class="fa-solid fa-eye"></i>
+                                    role="button"> <a class="text-white" href="comics/{{ $comic->id }}"><i
+                                            class="fa-solid fa-eye"></i>
                                     </a></button>
                         </td>
                         <td>
-                            <button type="submit" class="btn btn-primary"><a href="comics/{{ $comic->id }}/edit"><i
-                                        class="fa-solid fa-pen-to-square"></i> </a></button>
+                            <button type="submit" class="btn btn-primary"><a class="text-white"
+                                    href="comics/{{ $comic->id }}/edit"><i class="fa-solid fa-pen-to-square"></i>
+                                </a></button>
                         </td>
                         <td>
                             <button type="submit" class="btn btn-danger" data-bs-toggle="modal"

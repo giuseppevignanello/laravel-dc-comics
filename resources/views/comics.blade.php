@@ -6,7 +6,7 @@
             @forelse ($comics as $comic)
                 <div class="col">
                     <div class="card my-3">
-                        <a href="admin\comics\{{ $comic->id }}">
+                        <a style="color: black" href="admin\comics\{{ $comic->id }}">
                             <img src="{{ $comic->thumb }}" alt="Title">
                             <div class="card-body">
                                 <h4 class="card-title">{{ $comic->title }}</h4>
