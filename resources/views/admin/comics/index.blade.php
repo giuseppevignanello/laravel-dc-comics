@@ -28,14 +28,23 @@
                         <td><img style="height: 70px" src="{{ $comic->thumb }}" alt=""></td>
                         <td>{{ $comic->price }}</td>
                         <td>
-                            <a href="comics/{{ $comic->id }}"><i class="fa-solid fa-eye"></i> </a>
+
+                            <button type="submit" class="btn btn-primary"><a href="comics/{{ $comic->id }}"> <a
+                                        href="comics/{{ $comic->id }}"><i class="fa-solid fa-eye"></i> </a></button>
                         </td>
                         <td>
-                            <a href="comics/{{ $comic->id }}/edit"><i class="fa-solid fa-pen-to-square"></i> </a>
+                            <button type="submit" class="btn btn-primary"><a href="comics/{{ $comic->id }}/edit"><i
+                                        class="fa-solid fa-pen-to-square"></i> </a></button>
                         </td>
                         <td>
-                            <a href="comics/{{ $comic->id }}"><i class="fa-solid fa-trash"></i></a>
+                            <form action="{{ route('comics.destroy', $comic->id) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                            </form>
                         </td>
+
+
                     </tr>
                 @endforeach
             </tbody>
