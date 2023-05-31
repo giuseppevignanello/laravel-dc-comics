@@ -10,7 +10,6 @@
             </div>
         @endif
 
-
         <table class="table table-primary my-5">
             <thead>
                 <tr>
@@ -18,7 +17,6 @@
                     <th scope="col">Thumb</th>
                     <th scope="col">Price</th>
                     <th scope="col" colspan="4" class="text-center">Actions</th>
-
                 </tr>
             </thead>
             <tbody>
@@ -28,27 +26,29 @@
                         <td><img style="height: 70px" src="{{ $comic->thumb }}" alt=""></td>
                         <td>{{ $comic->price }}</td>
                         <td>
-
-                            <button type="submit" class="btn btn-primary"><a href="comics/{{ $comic->id }}"
-                                    role="button"> <a class="text-white" href="comics/{{ $comic->id }}"><i
-                                            class="fa-solid fa-eye"></i>
-                                    </a></button>
+                            <button type="submit" class="btn btn-primary">
+                                <a href="comics/{{ $comic->id }}" role="button" class="text-white">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                            </button>
                         </td>
                         <td>
-                            <button type="submit" class="btn btn-primary"><a class="text-white"
-                                    href="comics/{{ $comic->id }}/edit"><i class="fa-solid fa-pen-to-square"></i>
-                                </a></button>
+                            <button type="submit" class="btn btn-primary">
+                                <a class="text-white" href="comics/{{ $comic->id }}/edit">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                            </button>
                         </td>
                         <td>
                             <button type="submit" class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#deleteModal"><i class="fa-solid fa-trash"></i></button>
+                                data-bs-target="#deleteModal-{{ $comic->id }}">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
                         </td>
-
                     </tr>
-                    {{-- Modal --}}
-                    <!-- Modal Body -->
 
-                    <div class="modal fade" id="deleteModal" tabindex="-1" data-bs-backdrop="static"
+                    {{-- Modal --}}
+                    <div class="modal fade" id="deleteModal-{{ $comic->id }}" tabindex="-1" data-bs-backdrop="static"
                         data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
                             <div class="modal-content">
@@ -65,13 +65,13 @@
                                     <form action="{{ route('comics.destroy', $comic->id) }}" method="post">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger"> Delete</button>
+                                        <button type="submit" class="btn btn-danger">Delete</button>
                                     </form>
-                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 @empty
                     <tr>
                         <td>No results</td>
@@ -79,8 +79,5 @@
                 @endforelse
             </tbody>
         </table>
-
-
-    </div>
     </div>
 @endsection
