@@ -9,7 +9,7 @@
             <button class="btn btn-primary btn-lg" type="button">Example button</button>
         </div>
     </div>
-    <div class="content_home">
+    <div class="content_home my-5">
         <div class="container h-100">
             <div class="row h-50">
                 <div class="card col p-0 me-2">
@@ -20,14 +20,18 @@
                         <p class="card-text">Discover our last movies</p>
                     </div>
                 </div>
+
                 <div class="card col p-0 me-2">
-                    <img src="https://luisgyg.com/wp-content/uploads/2023/02/dc-hero_20220721_SDCC_62d87621a4d733.05089136_62ded671a6a2c2.47617848.jpg"
-                        alt="Title">
-                    <div class="card-body">
-                        <h4 class="card-title"><strong> COMICS </strong> </h4>
-                        <p class="card-text">Classic DC Comics</p>
-                    </div>
+                    <a href="{{ route('comics') }}" style="color: black">
+                        <img src="https://luisgyg.com/wp-content/uploads/2023/02/dc-hero_20220721_SDCC_62d87621a4d733.05089136_62ded671a6a2c2.47617848.jpg"
+                            alt="Title">
+                        <div class="card-body">
+                            <h4 class="card-title"><strong> COMICS </strong> </h4>
+                            <p class="card-text">Classic DC Comics</p>
+                        </div>
+                    </a>
                 </div>
+
                 <div class="card col me-2">
                     <img src="https://static.dc.com/dc/files/default_images/Gallery_JLINFINITY_Cv1-%2528Main%2529_60819f32149722.47056974_6081a526328677.07524034.jpg"
                         alt="Title">
