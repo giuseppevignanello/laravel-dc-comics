@@ -14,7 +14,7 @@
                     <div class="col">
                         <div class="card my-3 shadow">
                             <a style="color: black" href="admin\comics\{{ $comic->id }}">
-                                <img src="{{ $comic->thumb }}" alt="Title">
+                                <img src="{{ $comic->thumb }}" alt="Title" class="card-img-top img-fluid">
                                 <div class="card-body">
                                     <h2 class="card-title"><strong> {{ $comic->title }} </strong></h2>
                                     <p class="card-text">{{ $comic->series }}</p>

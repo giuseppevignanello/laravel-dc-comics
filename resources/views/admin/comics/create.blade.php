@@ -1,15 +1,25 @@
 @extends('layouts.app')
 @section('content')
+
+    @if ($errors->any())
+        <div class='alert alert-danger'>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <div class="container">
         <form action="{{ route('comics.store') }}" method="post">
             @csrf
             <div class="col-md-4">
                 <label for="title" class="form-label text-white mt-3">Title</label>
-                <input type="text" class="form-control" id="title" name="title" required>
+                <input type="text" class="form-control" id="title" name="title">
             </div>
             <div class="col-md-4">
                 <label for="description" class="form-label text-white">Description</label>
-                <input type="text" class="form-control" id="description" name="description" required>
+                <input type="text" class="form-control" id="description" name="description">
             </div>
             <div class="mb-3">
                 <label for="thumb" class="form-label text-white">Image</label>
@@ -17,19 +27,19 @@
             </div>
             <div class="col-md-4">
                 <label for="price" class="form-label text-white">Price</label>
-                <input type="text" class="form-control" id="price" name="price" required>
+                <input type="text" class="form-control" id="price" name="price">
             </div>
             <div class="col-md-4">
                 <label for="series" class="form-label text-white">Series</label>
-                <input type="text" class="form-control" id="series" name="series" required>
+                <input type="text" class="form-control" id="series" name="series">
             </div>
             <div class="col-md-4">
                 <label for="sale_date" class="form-label text-white">Sale Date</label>
-                <input type="date" class="form-control" id="sale_date" name="sale_date" required>
+                <input type="date" class="form-control" id="sale_date" name="sale_date">
             </div>
             <div class="col-md-4">
                 <label for="type" class="form-label text-white">Type</label>
-                <input type="text" class="form-control" id="type" name="type" required>
+                <input type="text" class="form-control" id="type" name="type">
             </div>
             <div class="col-12">
                 <button class="btn btn-primary my-4" type="submit">Add comic</button>
