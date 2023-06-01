@@ -13,11 +13,13 @@
         <div class="container h-100">
             <div class="row h-50">
                 <div class="card col p-0 me-4">
-                    <img src="https://static.dc.com/2023-05/TFLSH_INSTA_MAIN_1936x1936_DOM.jpg?w=1200" alt="Title">
-                    <div class="card-body">
-                        <h4 class="card-title"> <strong> MOVIES </strong></h4>
-                        <p class="card-text">Discover our last movies</p>
-                    </div>
+                    <a href="{{ route('movies') }}" style="color: black">
+                        <img src="https://static.dc.com/2023-05/TFLSH_INSTA_MAIN_1936x1936_DOM.jpg?w=1200" alt="Title">
+                        <div class="card-body">
+                            <h4 class="card-title"> <strong> MOVIES </strong></h4>
+                            <p class="card-text">Discover our last movies</p>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="card col p-0 me-4">

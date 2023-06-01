@@ -20,6 +20,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('comics') }}">Comics</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('movies') }}">Movies</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="{{ route('about') }}">About</a>
 
@@ -33,10 +36,6 @@
                         </div>
                     </li>
                 </ul>
-                <form class="d-flex my-2 my-lg-0">
-                    <input class="form-control me-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>
