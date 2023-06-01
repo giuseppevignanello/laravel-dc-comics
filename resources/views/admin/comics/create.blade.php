@@ -15,7 +15,15 @@
             @csrf
             <div class="col-md-4">
                 <label for="title" class="form-label text-white mt-3">Title</label>
-                <input type="text" class="form-control" id="title" name="title">
+                <input type="text" class="form-control @error('title')
+                is-invalid
+            @enderror"
+                    id="title" name="title">
+                @error('title')
+                    <div class="alert alert-danger" role="alert">
+                        <h4 class="alert-heading">Title, Error: {{ $message }}</h4>
+                    </div>
+                @enderror
             </div>
             <div class="col-md-4">
                 <label for="description" class="form-label text-white">Description</label>
@@ -27,20 +35,44 @@
             </div>
             <div class="col-md-4">
                 <label for="price" class="form-label text-white">Price</label>
-                <input type="text" class="form-control" id="price" name="price">
+                <input type="text" class="form-control @error('price')
+                is-invalid
+            @enderror"
+                    id="price" name="price">
             </div>
+            @error('price')
+                <div class="alert alert-danger" role="alert">
+                    <h4 class="alert-heading">Price, Error: {{ $message }}</h4>
+                </div>
+            @enderror
             <div class="col-md-4">
                 <label for="series" class="form-label text-white">Series</label>
-                <input type="text" class="form-control" id="series" name="series">
+                <input type="text" class="form-control @error('series')
+                is-invalid
+            @enderror"
+                    id="series" name="series">
             </div>
+            @error('series')
+                <div class="alert alert-danger" role="alert">
+                    <h4 class="alert-heading">Series, Error: {{ $message }}</h4>
+                </div>
+            @enderror
             <div class="col-md-4">
                 <label for="sale_date" class="form-label text-white">Sale Date</label>
                 <input type="date" class="form-control" id="sale_date" name="sale_date">
             </div>
             <div class="col-md-4">
                 <label for="type" class="form-label text-white">Type</label>
-                <input type="text" class="form-control" id="type" name="type">
+                <input type="text" class="form-control @error('type')
+                is-invalid
+            @enderror"
+                    id="type" name="type">
             </div>
+            @error('series')
+                <div class="alert alert-danger" role="alert">
+                    <h4 class="alert-heading">Series, Error: {{ $message }}</h4>
+                </div>
+            @enderror
             <div class="col-12">
                 <button class="btn btn-primary my-4" type="submit">Add comic</button>
             </div>
