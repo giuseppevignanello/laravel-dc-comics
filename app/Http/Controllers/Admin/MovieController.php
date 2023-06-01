@@ -19,14 +19,15 @@ class MovieController extends Controller
 
     public function create()
     {
-        return view('admin.momics.create');
+        return view('admin.movies.create');
     }
 
-    public function store(StoreMovieRequest $request, Movie $movie)
+
+    public function store(StoreMovieRequest $request)
     {
         $val_data = $request->validated();
 
-        $movie->store($val_data);
+        Movie::create($val_data);
 
         return to_route('movies.index')->with('message', 'movie created successfully');
     }

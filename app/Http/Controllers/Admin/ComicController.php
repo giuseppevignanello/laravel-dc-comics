@@ -22,11 +22,11 @@ class ComicController extends Controller
         return view('admin.comics.create');
     }
 
-    public function store(StoreComicRequest $request, Comic $comic)
+    public function store(StoreComicRequest $request)
     {
         $val_data = $request->validated();
 
-        $comic->store($val_data);
+        Comic::create($val_data);
 
         return to_route('comics.index')->with('message', 'Comic created successfully');
     }
@@ -45,7 +45,7 @@ class ComicController extends Controller
     {
         $val_data = $request->validated();
 
-        $comic->store($val_data);
+        $comic->update($val_data);
         return to_route('comics.index')->with('message', 'Comic update successfully ');
     }
 
