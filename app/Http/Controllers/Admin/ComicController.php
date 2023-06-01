@@ -40,6 +40,7 @@ class ComicController extends Controller
         return view('admin.comics.edit', compact('comic'));
     }
 
+
     public function update(UpdateComicRequest $request, Comic $comic)
     {
         $val_data = $request->validated();

@@ -23,7 +23,7 @@
             </div>
             @error('title')
                 <div class="alert alert-danger" role="alert">
-                    <h4 class="alert-heading">Title, Error: {{ $message }}</h4>
+                    <h4 class="alert-heading">{{ $message }}</h4>
                 </div>
             @enderror
             <div class="col-md-4">
@@ -44,7 +44,7 @@
             </div>
             @error('price')
                 <div class="alert alert-danger" role="alert">
-                    <h4 class="alert-heading">Price, Error: {{ $message }}</h4>
+                    <h4 class="alert-heading">{{ $message }}</h4>
                 </div>
             @enderror
             <div class="col-md-4">
@@ -56,7 +56,7 @@
             </div>
             @error('series')
                 <div class="alert alert-danger" role="alert">
-                    <h4 class="alert-heading">Series, Error: {{ $message }}</h4>
+                    <h4 class="alert-heading">{{ $message }}</h4>
                 </div>
             @enderror
             <div class="col-md-4">

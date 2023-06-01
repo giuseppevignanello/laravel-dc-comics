@@ -35,4 +35,14 @@ class UpdateComicRequest extends FormRequest
                 'type' => 'nullable|max:255',
             ];
     }
+    public function messages()
+    {
+        return [
+            'title.required' => 'Il titolo è obbligatorio',
+            'price.required' => 'Il prezzo è obbligatorio',
+            'series.max' => 'Il nome della serie deve essere lungo massimo 50 caratteri',
+            'type.max' => 'Il nome della tipologia deve essere lungo massimo 255 caratteri'
+
+        ];
+    }
 }
