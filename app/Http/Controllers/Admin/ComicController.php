@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreComicRequest;
+use App\Http\Requests\UpdateComicRequest;
 use App\Models\Comic;
 use Illuminate\Http\Request;
 
@@ -20,29 +22,12 @@ class ComicController extends Controller
         return view('admin.comics.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreComicRequest $request, Comic $comic)
     {
-        $request->validate(
-            [
-                'title' => 'required|unique:comics|min:5|max:200',
-                'description' => 'nullable',
-                'thumb' => 'nullable',
-                'price' => 'required',
-                'series' => 'nullable|max:50',
-                'sale_date' => 'nullable',
-                'type' => 'nullable|max:255',
-            ]
-        );
+        $val_data = $request->validated();
 
-        $comic = new Comic();
-        $comic->title = $request->title;
-        $comic->description = $request->description;
-        $comic->thumb = $request->thumb;
-        $comic->price = $request->price;
-        $comic->series = $request->series;
-        $comic->sale_date = $request->sale_date;
-        $comic->type = $request->type;
-        $comic->save();
+        $comic->store($val_data);
+
         return to_route('comics.index')->with('message', 'Comic created successfully');
     }
     public function show(Comic $comic)
@@ -55,17 +40,11 @@ class ComicController extends Controller
         return view('admin.comics.edit', compact('comic'));
     }
 
-    public function update(Request $request, Comic $comic)
+    public function update(UpdateComicRequest $request, Comic $comic)
     {
-        $comic->title = $request->title;
-        $comic->description = $request->description;
-        $comic->thumb = $request->thumb;
-        $comic->price = $request->price;
-        $comic->series = $request->series;
-        $comic->sale_date = $request->sale_date;
-        $comic->type = $request->type;
-        $comic->save();
+        $val_data = $request->validated();
 
+        $comic->store($val_data);
         return to_route('comics.index')->with('message', 'Comic update successfully ');
     }
 
