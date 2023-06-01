@@ -28,8 +28,8 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                             aria-haspopup="true" aria-expanded="false">Admin</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{{ route('comics.index') }}">Dashoboard</a>
-                            <a class="dropdown-item" href="{{ route('comics.create') }}">Add new Comic</a>
+                            <a class="dropdown-item" href="{{ route('comics.index') }}">Comics</a>
+                            <a class="dropdown-item" href="{{ route('movies.index') }}">Movies</a>
                         </div>
                     </li>
                 </ul>

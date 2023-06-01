@@ -7,7 +7,7 @@ return [
         'director' => 'Christopher Nolan',
         'year' => 2008,
         'rating' => 9.0,
-        'poster' => 'https://example.com/posters/the_dark_knight.jpg',
+        'poster' => 'https://img.posterstore.com/zoom/wb0037-8batman-thedarkknightrises50x70.jpg',
     ],
     [
         'title' => 'Wonder Woman',
@@ -15,7 +15,7 @@ return [
         'director' => 'Patty Jenkins',
         'year' => 2017,
         'rating' => 7.4,
-        'poster' => 'https://example.com/posters/wonder_woman.jpg',
+        'poster' => 'https://i.etsystatic.com/31639397/r/il/b246e7/3310904932/il_570xN.3310904932_ahzo.jpg',
     ],
     // Aggiungi gli altri film qui
     [
@@ -24,7 +24,7 @@ return [
         'director' => 'James Wan',
         'year' => 2018,
         'rating' => 6.9,
-        'poster' => 'https://example.com/posters/aquaman.jpg',
+        'poster' => 'https://sm.ign.com/ign_es/screenshot/default/captura_c3y1.jpg',
     ],
     [
         'title' => 'Man of Steel',
@@ -32,7 +32,7 @@ return [
         'director' => 'Zack Snyder',
         'year' => 2013,
         'rating' => 7.0,
-        'poster' => 'https://example.com/posters/man_of_steel.jpg',
+        'poster' => 'https://m.media-amazon.com/images/I/51OzJHoXvYL._AC_.jpg',
     ],
     [
         'title' => 'Suicide Squad',
@@ -40,7 +40,7 @@ return [
         'director' => 'David Ayer',
         'year' => 2016,
         'rating' => 6.0,
-        'poster' => 'https://example.com/posters/suicide_squad.jpg',
+        'poster' => 'https://m.media-amazon.com/images/M/MV5BMjM1OTMxNzUyM15BMl5BanBnXkFtZTgwNjYzMTIzOTE@._V1_.jpg',
     ],
     [
         'title' => 'Shazam!',
@@ -48,7 +48,7 @@ return [
         'director' => 'David F. Sandberg',
         'year' => 2019,
         'rating' => 7.1,
-        'poster' => 'https://example.com/posters/shazam.jpg',
+        'poster' => 'https://static.posters.cz/image/1300/posters/shazam-fury-of-the-gods-characters-i162030.jpg',
     ],
     [
         'title' => 'Birds of Prey',
@@ -56,7 +56,7 @@ return [
         'director' => 'Cathy Yan',
         'year' => 2020,
         'rating' => 6.1,
-        'poster' => 'https://example.com/posters/birds_of_prey.jpg',
+        'poster' => 'https://img.posterstore.com/zoom/wb0067-8harleyquinn-birdsofpreyno150x70.jpg',
     ],
     [
         'title' => 'Joker',
@@ -64,7 +64,7 @@ return [
         'director' => 'Todd Phillips',
         'year' => 2019,
         'rating' => 8.5,
-        'poster' => 'https://example.com/posters/joker.jpg',
+        'poster' => 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/joker-poster-1567070106.jpg',
     ],
 
 ];

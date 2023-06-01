@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ComicController;
+use App\Http\Controllers\Admin\MovieController;
 use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,4 @@ Route::get('/comics', [PageController::class, 'comics'])->name('comics');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 
 Route::resource('/admin/comics', ComicController::class);
+Route::resource('/admin/movies', MovieController::class);
