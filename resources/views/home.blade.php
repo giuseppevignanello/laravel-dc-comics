@@ -12,18 +12,17 @@
     <div class="content_home my-5">
         <div class="container h-100">
             <div class="row h-50">
-                <div class="card col p-0 me-2">
-                    <img src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2020/08/justice-league-social.jpg"
-                        alt="Title">
+                <div class="card col p-0 me-4">
+                    <img src="https://static.dc.com/2023-05/TFLSH_INSTA_MAIN_1936x1936_DOM.jpg?w=1200" alt="Title">
                     <div class="card-body">
                         <h4 class="card-title"> <strong> MOVIES </strong></h4>
                         <p class="card-text">Discover our last movies</p>
                     </div>
                 </div>
 
-                <div class="card col p-0 me-2">
+                <div class="card col p-0 me-4">
                     <a href="{{ route('comics') }}" style="color: black">
-                        <img src="https://luisgyg.com/wp-content/uploads/2023/02/dc-hero_20220721_SDCC_62d87621a4d733.05089136_62ded671a6a2c2.47617848.jpg"
+                        <img src="https://pyxis.nymag.com/v1/imgs/f31/d82/35f9cbf66c1e314a40f98db42f6f08758f-16-dc-rebirth.rsquare.w700.jpg"
                             alt="Title">
                         <div class="card-body">
                             <h4 class="card-title"><strong> COMICS </strong> </h4>
@@ -32,11 +31,11 @@
                     </a>
                 </div>
 
-                <div class="card col me-2">
-                    <img src="https://static.dc.com/dc/files/default_images/Gallery_JLINFINITY_Cv1-%2528Main%2529_60819f32149722.47056974_6081a526328677.07524034.jpg"
+                <div class="card col me-4">
+                    <img src="https://www.merchandisingplaza.es/506541/Gorra-Batman-Gorra-Batman-unisex-s.jpg"
                         alt="Title">
                     <div class="card-body">
-                        <h4 class="card-title"><strong>MERCHANDISE </strong></h4>
+                        <h4 class="card-title"><strong>SHOP</strong></h4>
                         <p class="card-text">The perfect geek present</p>
                     </div>
                 </div>
